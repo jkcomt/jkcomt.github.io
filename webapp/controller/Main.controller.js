@@ -15,10 +15,8 @@ sap.ui.define([
         "use strict";
 
         return BaseController.extend("com.demosapui5.demosapui5.controller.Main", {
-            onInit: function () {
-                
-                this._initTheme();  
-
+            onInit: function () {                
+              
             },            
             onPressTile: function (oEvent) {
                 //  console.log("Tile pulsado");

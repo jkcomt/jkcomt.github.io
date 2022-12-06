@@ -7,6 +7,7 @@ sap.ui.define(
   
       return BaseController.extend("com.demosapui5.demosapui5.controller.App", {
         onInit() {
+          this._initTheme();
         }
       });
     }
