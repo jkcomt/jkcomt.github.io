@@ -1,0 +1,35 @@
+<mvc:View
+	controllerName="com.demosapui5.demosapui5.controller.Tabs"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true"
+	xmlns:core="sap.ui.core"
+	height="100%"
+	busyIndicatorDelay="0">
+    <Page showNavButton="true" navButtonPress="onNavBack" title="{i18n>Tabs}" titleAlignment="Center">
+	<headerContent>
+		<core:Fragment fragmentName="com.demosapui5.demosapui5.view.fragment.HeaderContent" type="XML"/>
+	</headerContent>
+	<TabContainer id="myTabContainer"
+		showAddNewButton="true"
+		class="sapUiResponsiveContentPadding sapUiResponsivePadding--header">
+		<items>
+		<TabContainerItem name="prueba 1">
+			<content>
+				<Text text="Hola"/>
+			</content>
+		</TabContainerItem>
+		<TabContainerItem name="prueba 2">
+			<content>
+				<Text text="Como"/>
+			</content>
+		</TabContainerItem>
+		<TabContainerItem name="prueba 3">
+			<content>
+				<Text text="Estas"/>
+			</content>
+		</TabContainerItem>
+		</items>
+	</TabContainer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,71 @@
+<mvc:View 
+	controllerName="com.demosapui5.demosapui5.controller.Detail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:uxap="sap.uxap"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+    <Page title="{i18n>Detalle de Productos}" showNavButton="true" navButtonPress="onNavBack" titleAlignment="Center">
+	<headerContent>
+		<core:Fragment fragmentName="com.demosapui5.demosapui5.view.fragment.HeaderContent" type="XML"/>
+	</headerContent>
+	<uxap:ObjectPageLayout  showTitleInHeaderContent="true" upperCaseAnchorBar="false">
+	<uxap:headerTitle >
+		<uxap:ObjectPageDynamicHeaderTitle >
+		<uxap:expandedHeading >
+			<HBox>
+			<Title text="{Product>/Name}" wrapping="true"/>
+			</HBox>
+		</uxap:expandedHeading>
+		<uxap:snappedHeading>
+			<FlexBox fitContainer="true" alignItems="Center">
+				<Avatar src="{Product>/ProductPicUrl}" class="sapUiTinyMarginEnd" />
+				<l:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<Text text="{Product>/Name}"/>
+				</l:VerticalLayout>	
+			</FlexBox>
+		</uxap:snappedHeading>
+		</uxap:ObjectPageDynamicHeaderTitle>
+	</uxap:headerTitle>
+	<uxap:headerContent>
+		<FlexBox wrap="Wrap">
+			<Avatar 
+			class="sapUiSmallMarginEnd" 
+			src="{Product>/ProductPicUrl}" 
+			displaySize="L"  />
+				<l:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<Label text="{Product>/Name}" design="Bold"/>
+					<Text text="{Product>/Category}"/>
+					<Button text="Price" press="onPressPrice" />
+				</l:VerticalLayout>	
+		</FlexBox>
+	</uxap:headerContent>
+	<uxap:sections>
+	<uxap:ObjectPageSection titleUppercase="false" title="Supplier">
+	<uxap:subSections>
+	<uxap:ObjectPageSubSection>
+	<uxap:blocks>
+	<l:VerticalLayout>
+		<Label text="MainCategory"/>
+		<Text text="{Product>/MainCategory}"/>
+	</l:VerticalLayout>
+	<l:VerticalLayout>
+		<Label text="SupplierName"/>
+		<Text text="{Product>/SupplierName}"/>
+	</l:VerticalLayout>
+	<l:VerticalLayout>
+		<Label text="Description"/>
+		<Text text="{Product>/Description}"/>
+	</l:VerticalLayout>
+	</uxap:blocks>
+	</uxap:ObjectPageSubSection>
+	</uxap:subSections>		
+	</uxap:ObjectPageSection>
+	</uxap:sections>
+	</uxap:ObjectPageLayout>
+    </Page>
+
+</mvc:View>

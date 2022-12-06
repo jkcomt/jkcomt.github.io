@@ -1,0 +1,40 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    >
+    <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Productos"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			columnsXL="1"
+			columnsL="1"
+		
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="ProductId" />
+				<Input id="productid" value="{NewProduct>/ProductId}" change="validador"/>
+				<Label text="Name" />
+				<Input id="nameid" value="{NewProduct>/Name}" change="validador" />
+                <Label text="Category" />
+				<Input id="categoryid" value="{NewProduct>/Category}" change="validador" />
+				<Label text="Description" />
+				<Input id="descriptionid" value="{NewProduct>/Description}" change="validador"/>
+                <Label text="Quantity" />
+				<Input id="quantityid" value="{NewProduct>/Quantity}" change="validador" type="Number"/>
+                <Label text="Price" />
+				<Input id="priceid" value="{NewProduct>/Price}" change="validador" type="Number"/>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+
+
+</c:FragmentDefinition>

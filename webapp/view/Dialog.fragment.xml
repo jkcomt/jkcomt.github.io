@@ -1,0 +1,15 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core">
+    <Dialog title="Bienvenido" contentWidth="300px" id="idDialog">
+    <content>
+        <Text id="idInput" class="sapUiSmallMargin"/>
+    </content>
+     <beginButton>
+         <Button
+            text="cerrar"
+            press="onCloseDialog"/>
+      </beginButton>
+    </Dialog>
+
+</c:FragmentDefinition>

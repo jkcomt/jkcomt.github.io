@@ -1,0 +1,25 @@
+<mvc:View controllerName="com.demosapui5.demosapui5.controller.Grid" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" displayBlock="true" height="100%" busyIndicatorDelay="0" xmlns:f="sap.f">
+    <Page showNavButton="true" navButtonPress="onNavBack" title="{i18n>Grid de Productos}"  class="sapUiResponsiveContentPadding">
+        <headerContent>
+            <core:Fragment fragmentName="com.demosapui5.demosapui5.view.fragment.HeaderContent" type="XML" />
+        </headerContent>
+        <!-- <Slider value="100" liveChange="onSliderMoved" /> -->
+        <Panel id="idGridPanel" backgroundDesign="Transparent">
+            
+            <f:GridList id="gridList" headerText="Colección de Productos" items="{path:'myLocalModel>/ProductCollection'}" growing="true"
+            growingThreshold="50" growingDirection="Downwards" >
+                <f:GridListItem type="Active" >
+                   
+                        <GenericTile 
+                            backgroundImage="{myLocalModel>ProductPicUrl}" 
+                            class="imgopacity withBgImg" mode="ContentMode">
+                            <TileContent >
+                                <Title text="{myLocalModel>Name}" wrapping="true" class="colorBlack" level="H4"/>
+                            </TileContent>
+                        </GenericTile>
+           
+                </f:GridListItem>
+            </f:GridList>
+        </Panel>
+    </Page>
+</mvc:View>

@@ -1,0 +1,15 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+
+	<l:VerticalLayout width="100%">
+		<l:content>
+		<Input
+		id="nameInput"
+		class="sapUiSmallMarginBottom"
+		placeholder="Ingrese Texto"	/>
+		</l:content>
+	</l:VerticalLayout>
+    
+</c:FragmentDefinition>
